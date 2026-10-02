@@ -1,353 +1,927 @@
-<svg width="1200" height="430" viewBox="0 0 1200 430" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="430" viewBox="0 0 1200 430"
+     xmlns="http://www.w3.org/2000/svg">
 
 <defs>
+
+  <!-- BACKGROUND -->
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#02040a"/>
-    <stop offset="50%" stop-color="#080b1c"/>
-    <stop offset="100%" stop-color="#100820"/>
+    <stop offset="0%" stop-color="#01030a"/>
+    <stop offset="45%" stop-color="#05091a"/>
+    <stop offset="70%" stop-color="#0b0820"/>
+    <stop offset="100%" stop-color="#010208"/>
+  </linearGradient>
+
+  <radialGradient id="purpleGlow">
+    <stop offset="0%" stop-color="#855cff" stop-opacity=".25"/>
+    <stop offset="45%" stop-color="#6438d8" stop-opacity=".08"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="blueGlow">
+    <stop offset="0%" stop-color="#287cff" stop-opacity=".16"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- GLASS -->
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity=".075"/>
+    <stop offset="50%" stop-color="#8d6aff" stop-opacity=".025"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity=".015"/>
   </linearGradient>
 
   <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#15132b"/>
-    <stop offset="100%" stop-color="#090b18"/>
+    <stop offset="0%" stop-color="#15142d"/>
+    <stop offset="100%" stop-color="#080a17"/>
   </linearGradient>
 
-  <radialGradient id="glow">
-    <stop offset="0%" stop-color="#754cff" stop-opacity=".35"/>
-    <stop offset="100%" stop-color="#754cff" stop-opacity="0"/>
-  </radialGradient>
+  <!-- GRID -->
+  <pattern id="grid" width="35" height="35"
+           patternUnits="userSpaceOnUse">
+    <path d="M35 0H0V35"
+          fill="none"
+          stroke="#9275ff"
+          stroke-opacity=".045"/>
+  </pattern>
+
+  <!-- SOFT GLOW -->
+  <filter id="softGlow">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+
 </defs>
 
+
+<!-- ================================================= -->
 <!-- BACKGROUND -->
-<rect width="1200" height="430" rx="25" fill="url(#bg)"/>
+<!-- ================================================= -->
 
-<ellipse cx="600" cy="220" rx="500" ry="250" fill="url(#glow)"/>
+<rect
+  width="1200"
+  height="430"
+  rx="26"
+  fill="url(#bg)"/>
 
-<!-- GRID -->
-<g opacity=".12" stroke="#7860ff" stroke-width="1">
-  <path d="M0 70H1200"/>
-  <path d="M0 140H1200"/>
-  <path d="M0 210H1200"/>
-  <path d="M0 280H1200"/>
-  <path d="M0 350H1200"/>
+<ellipse
+  cx="500"
+  cy="230"
+  rx="520"
+  ry="280"
+  fill="url(#purpleGlow)">
 
-  <path d="M100 0V430"/>
-  <path d="M200 0V430"/>
-  <path d="M300 0V430"/>
-  <path d="M400 0V430"/>
-  <path d="M500 0V430"/>
-  <path d="M600 0V430"/>
-  <path d="M700 0V430"/>
-  <path d="M800 0V430"/>
-  <path d="M900 0V430"/>
-  <path d="M1000 0V430"/>
-  <path d="M1100 0V430"/>
+  <animate
+    attributeName="cx"
+    values="450;650;450"
+    dur="14s"
+    repeatCount="indefinite"/>
+
+</ellipse>
+
+<ellipse
+  cx="1050"
+  cy="100"
+  rx="330"
+  ry="250"
+  fill="url(#blueGlow)">
+
+  <animate
+    attributeName="cy"
+    values="80;130;80"
+    dur="11s"
+    repeatCount="indefinite"/>
+
+</ellipse>
+
+
+<!-- ================================================= -->
+<!-- STAR PARTICLES -->
+<!-- ================================================= -->
+
+<g fill="#b9a7ff">
+
+  <circle cx="80" cy="80" r="1"/>
+  <circle cx="170" cy="120" r=".7"/>
+  <circle cx="270" cy="65" r=".8"/>
+  <circle cx="930" cy="75" r=".8"/>
+  <circle cx="1040" cy="120" r="1"/>
+  <circle cx="1130" cy="85" r=".7"/>
+  <circle cx="70" cy="350" r=".8"/>
+  <circle cx="1120" cy="350" r="1"/>
+  <circle cx="450" cy="390" r=".7"/>
+  <circle cx="750" cy="385" r=".8"/>
+
 </g>
 
-<!-- MAIN GLASS -->
+
+<!-- ================================================= -->
+<!-- MAIN GLASS PANEL -->
+<!-- ================================================= -->
+
 <rect
   x="25"
   y="25"
   width="1150"
   height="380"
   rx="22"
-  fill="#ffffff"
-  fill-opacity=".025"
-  stroke="#9475ff"
-  stroke-opacity=".45"/>
+  fill="url(#grid)"
+  stroke="#9275ff"
+  stroke-opacity=".38"/>
 
-<!-- CORNERS -->
-<g fill="none" stroke="#a98cff" stroke-width="2" opacity=".8">
+<rect
+  x="38"
+  y="38"
+  width="1124"
+  height="354"
+  rx="19"
+  fill="url(#glass)"
+  stroke="#ffffff"
+  stroke-opacity=".06"/>
+
+
+<!-- ================================================= -->
+<!-- GLASS REFLECTION -->
+<!-- ================================================= -->
+
+<path
+  d="M65 63 Q600 32 1135 63"
+  fill="none"
+  stroke="#ffffff"
+  stroke-opacity=".11"/>
+
+<path
+  d="M170 77 Q600 48 1030 77"
+  fill="none"
+  stroke="#a68aff"
+  stroke-opacity=".06"/>
+
+
+<!-- ================================================= -->
+<!-- CORNER HUD -->
+<!-- ================================================= -->
+
+<g
+  fill="none"
+  stroke="#a88aff"
+  stroke-width="1.5"
+  opacity=".8">
+
   <path d="M52 105V52H105"/>
   <path d="M1095 52H1148V105"/>
   <path d="M52 325V378H105"/>
   <path d="M1095 378H1148V325"/>
+
 </g>
 
+
+<!-- ================================================= -->
 <!-- HEADER -->
+<!-- ================================================= -->
+
 <text
   x="600"
-  y="68"
+  y="67"
   text-anchor="middle"
-  fill="#bba7ff"
+  fill="#b7a4ff"
   font-family="monospace"
   font-size="10"
   letter-spacing="5">
+
   CONNECT // COMMUNICATION MATRIX
+
 </text>
 
 <text
   x="600"
-  y="102"
+  y="101"
   text-anchor="middle"
   fill="#ffffff"
   font-family="Arial"
   font-size="27"
   font-weight="700"
   letter-spacing="7">
+
   CONNECTION INTERFACE
-</text>
 
-<!-- LEFT CARD -->
-<rect
-  x="80"
-  y="145"
-  width="310"
-  height="90"
-  rx="14"
-  fill="url(#card)"
-  stroke="#9777ff"
-  stroke-opacity=".7"/>
-
-<text x="105" y="166"
-  fill="#a98cff"
-  font-family="monospace"
-  font-size="8"
-  letter-spacing="2">
-  CHANNEL 01
-</text>
-
-<text x="105" y="195"
-  fill="#ffffff"
-  font-family="Arial"
-  font-size="18"
-  font-weight="700">
-  GITHUB
-</text>
-
-<text x="105" y="217"
-  fill="#9b91b5"
-  font-family="monospace"
-  font-size="10">
-  @mclarchive
-</text>
-
-<g fill="#9b7cff">
-  <rect x="310" y="195" width="4" height="15"/>
-  <rect x="318" y="201" width="4" height="9"/>
-  <rect x="326" y="191" width="4" height="19"/>
-  <rect x="334" y="198" width="4" height="12"/>
-</g>
-
-<text x="350" y="222"
-  text-anchor="end"
-  fill="#665d7e"
-  font-family="monospace"
-  font-size="7">
-  REPOSITORY
 </text>
 
 
-<!-- RIGHT CARD -->
-<rect
-  x="810"
-  y="145"
-  width="310"
-  height="90"
-  rx="14"
-  fill="url(#card)"
-  stroke="#9777ff"
-  stroke-opacity=".7"/>
+<!-- ================================================= -->
+<!-- LEFT TOP HOLOGRAM CARD -->
+<!-- ================================================= -->
 
-<text x="835" y="166"
-  fill="#a98cff"
-  font-family="monospace"
-  font-size="8"
-  letter-spacing="2">
-  CHANNEL 02
-</text>
+<g>
 
-<text x="835" y="195"
-  fill="#ffffff"
-  font-family="Arial"
-  font-size="18"
-  font-weight="700">
-  EMAIL
-</text>
+  <rect
+    x="82"
+    y="145"
+    width="305"
+    height="92"
+    rx="13"
+    fill="url(#card)"
+    stroke="#9b7cff"
+    stroke-opacity=".65"/>
 
-<text x="835" y="217"
-  fill="#9b91b5"
-  font-family="monospace"
-  font-size="9">
-  STEPHENMICHAELKS@GMAIL.COM
-</text>
+  <!-- POP UP -->
+  <animate
+    attributeName="opacity"
+    values=".15;1"
+    dur="1.2s"
+    begin=".2s"
+    repeatCount="indefinite"/>
 
-<g stroke="#a98cff" stroke-width="1">
-  <path d="M1040 202L1050 202L1055 194L1062 211L1068 198L1075 202"/>
-</g>
+  <!-- BORDER PULSE -->
+  <rect
+    x="82"
+    y="145"
+    width="305"
+    height="92"
+    rx="13"
+    fill="none"
+    stroke="#b79aff"
+    stroke-opacity="0">
 
-<circle cx="1088" cy="165" r="4" fill="#b29aff"/>
+    <animate
+      attributeName="stroke-opacity"
+      values="0;.5;0"
+      dur="2.5s"
+      repeatCount="indefinite"/>
 
-<text x="1088" y="222"
-  text-anchor="middle"
-  fill="#665d7e"
-  font-family="monospace"
-  font-size="7">
-  SECURE
-</text>
+  </rect>
 
+  <text
+    x="107"
+    y="166"
+    fill="#a98cff"
+    font-family="monospace"
+    font-size="8"
+    letter-spacing="2">
 
-<!-- CENTER CORE -->
-<circle
-  cx="600"
-  cy="220"
-  r="65"
-  fill="#080817"
-  stroke="#8060ee"
-  stroke-opacity=".3"
-  stroke-width="10"/>
+    CHANNEL 01
 
-<circle
-  cx="600"
-  cy="220"
-  r="48"
-  fill="none"
-  stroke="#a88cff"
-  stroke-opacity=".6"
-  stroke-width="1"/>
+  </text>
 
-<circle
-  cx="600"
-  cy="220"
-  r="35"
-  fill="#0c0a1d"
-  stroke="#9b78ff"
-  stroke-opacity=".7"/>
+  <text
+    x="107"
+    y="195"
+    fill="#ffffff"
+    font-family="Arial"
+    font-size="18"
+    font-weight="700">
 
-<circle
-  cx="600"
-  cy="220"
-  r="9"
-  fill="#c9bbff"/>
+    GITHUB
 
-<circle
-  cx="600"
-  cy="220"
-  r="18"
-  fill="none"
-  stroke="#9d7cff"
-  stroke-opacity=".45"
-  stroke-width="2"/>
+  </text>
 
-<!-- CORE BRACKETS -->
-<g fill="none" stroke="#ad93ff" stroke-width="2">
-  <path d="M555 200V180H575"/>
-  <path d="M645 200V180H625"/>
-  <path d="M555 240V260H575"/>
-  <path d="M645 240V260H625"/>
+  <text
+    x="107"
+    y="216"
+    fill="#978daf"
+    font-family="monospace"
+    font-size="10">
+
+    @mclarchive
+
+  </text>
+
+  <!-- STATUS -->
+  <circle
+    cx="351"
+    cy="164"
+    r="4"
+    fill="#b59cff">
+
+    <animate
+      attributeName="opacity"
+      values="1;.2;1"
+      dur="1.6s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- SIGNAL BARS -->
+  <g fill="#a88cff">
+
+    <rect x="305" y="198" width="4" height="12">
+      <animate
+        attributeName="height"
+        values="5;15;8;13;5"
+        dur="2s"
+        repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="313" y="198" width="4" height="12">
+      <animate
+        attributeName="height"
+        values="12;6;16;8;12"
+        dur="1.7s"
+        repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="321" y="198" width="4" height="12">
+      <animate
+        attributeName="height"
+        values="8;15;5;14;8"
+        dur="2.2s"
+        repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="329" y="198" width="4" height="12">
+      <animate
+        attributeName="height"
+        values="14;7;12;5;14"
+        dur="1.8s"
+        repeatCount="indefinite"/>
+    </rect>
+
+  </g>
+
+  <text
+    x="351"
+    y="224"
+    text-anchor="middle"
+    fill="#665d7e"
+    font-family="monospace"
+    font-size="7">
+
+    REPOSITORY
+
+  </text>
+
 </g>
 
 
-<!-- LOWER LEFT -->
-<rect
-  x="80"
-  y="270"
-  width="310"
-  height="78"
-  rx="14"
-  fill="url(#card)"
-  stroke="#7658d0"
-  stroke-opacity=".65"/>
+<!-- ================================================= -->
+<!-- RIGHT TOP HOLOGRAM CARD -->
+<!-- ================================================= -->
 
-<text x="105" y="291"
-  fill="#9e84ed"
-  font-family="monospace"
-  font-size="8"
-  letter-spacing="2">
-  CHANNEL 03
-</text>
+<g>
 
-<text x="105" y="318"
-  fill="#ffffff"
-  font-family="Arial"
-  font-size="17"
-  font-weight="700">
-  INSTAGRAM
-</text>
+  <rect
+    x="813"
+    y="145"
+    width="305"
+    height="92"
+    rx="13"
+    fill="url(#card)"
+    stroke="#9b7cff"
+    stroke-opacity=".65"/>
 
-<text x="105" y="339"
-  fill="#89809f"
-  font-family="monospace"
-  font-size="9">
-  @stphnmichael._
-</text>
+  <animate
+    attributeName="opacity"
+    values=".15;1"
+    dur="1.2s"
+    begin=".5s"
+    repeatCount="indefinite"/>
 
-<g stroke="#a88cff">
-  <line x1="300" y1="298" x2="350" y2="298"/>
-  <line x1="300" y1="304" x2="337" y2="304" opacity=".5"/>
-  <line x1="300" y1="310" x2="345" y2="310" opacity=".25"/>
+  <rect
+    x="813"
+    y="145"
+    width="305"
+    height="92"
+    rx="13"
+    fill="none"
+    stroke="#b79aff"
+    stroke-opacity="0">
+
+    <animate
+      attributeName="stroke-opacity"
+      values="0;.5;0"
+      dur="2.5s"
+      begin=".6s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+  <text
+    x="838"
+    y="166"
+    fill="#a98cff"
+    font-family="monospace"
+    font-size="8"
+    letter-spacing="2">
+
+    CHANNEL 02
+
+  </text>
+
+  <text
+    x="838"
+    y="195"
+    fill="#ffffff"
+    font-family="Arial"
+    font-size="18"
+    font-weight="700">
+
+    EMAIL
+
+  </text>
+
+  <text
+    x="838"
+    y="216"
+    fill="#978daf"
+    font-family="monospace"
+    font-size="9">
+
+    STEPHENMICHAELKS@GMAIL.COM
+
+  </text>
+
+  <!-- SIGNAL WAVE -->
+  <path
+    d="M1035 202
+       L1043 202
+       L1048 195
+       L1054 210
+       L1060 198
+       L1066 203
+       L1076 203"
+    fill="none"
+    stroke="#a98cff"
+    stroke-width="1.5">
+
+    <animate
+      attributeName="opacity"
+      values=".2;1;.2"
+      dur="2s"
+      repeatCount="indefinite"/>
+
+  </path>
+
+  <circle
+    cx="1088"
+    cy="164"
+    r="4"
+    fill="#b59cff">
+
+    <animate
+      attributeName="r"
+      values="3;5;3"
+      dur="1.8s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <text
+    x="1088"
+    y="224"
+    text-anchor="middle"
+    fill="#665d7e"
+    font-family="monospace"
+    font-size="7">
+
+    SECURE CHANNEL
+
+  </text>
+
 </g>
 
 
-<!-- LOWER RIGHT -->
-<rect
-  x="810"
-  y="270"
-  width="310"
-  height="78"
-  rx="14"
-  fill="url(#card)"
-  stroke="#7658d0"
-  stroke-opacity=".65"/>
+<!-- ================================================= -->
+<!-- CENTRAL AI CORE -->
+<!-- ================================================= -->
 
-<text x="835" y="291"
-  fill="#9e84ed"
-  font-family="monospace"
-  font-size="8"
-  letter-spacing="2">
-  CHANNEL 04
-</text>
+<g>
 
-<text x="835" y="318"
-  fill="#ffffff"
-  font-family="Arial"
-  font-size="17"
-  font-weight="700">
-  DISCORD
-</text>
+  <!-- OUTER GLOW -->
+  <circle
+    cx="600"
+    cy="220"
+    r="70"
+    fill="none"
+    stroke="#815dff"
+    stroke-opacity=".08"
+    stroke-width="18"/>
 
-<text x="835" y="339"
-  fill="#89809f"
-  font-family="monospace"
-  font-size="9">
-  michaelmautoronto
-</text>
+  <!-- ROTATING RING -->
+  <circle
+    cx="600"
+    cy="220"
+    r="57"
+    fill="none"
+    stroke="#9f7cff"
+    stroke-opacity=".55"
+    stroke-width="1.5"
+    stroke-dasharray="3 8">
 
-<circle cx="1085" cy="301" r="5" fill="#a98cff"/>
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 600 220"
+      to="360 600 220"
+      dur="8s"
+      repeatCount="indefinite"/>
 
-<text x="1085" y="325"
-  text-anchor="middle"
-  fill="#665d7e"
-  font-family="monospace"
-  font-size="7">
-  LIVE
-</text>
+  </circle>
+
+  <!-- SECOND RING -->
+  <circle
+    cx="600"
+    cy="220"
+    r="47"
+    fill="none"
+    stroke="#6f52c9"
+    stroke-opacity=".45"
+    stroke-width="1"
+    stroke-dasharray="14 8">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360 600 220"
+      to="0 600 220"
+      dur="6s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- CORE -->
+  <circle
+    cx="600"
+    cy="220"
+    r="34"
+    fill="#080817"
+    stroke="#a783ff"
+    stroke-opacity=".7"/>
+
+  <circle
+    cx="600"
+    cy="220"
+    r="10"
+    fill="#cfc2ff">
+
+    <animate
+      attributeName="r"
+      values="7;11;7"
+      dur="2s"
+      repeatCount="indefinite"/>
+
+    <animate
+      attributeName="opacity"
+      values=".65;1;.65"
+      dur="2s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- ROTATING BRACKETS -->
+  <g
+    fill="none"
+    stroke="#b49cff"
+    stroke-width="2">
+
+    <path d="M555 201V180H576"/>
+    <path d="M645 201V180H624"/>
+    <path d="M555 239V260H576"/>
+    <path d="M645 239V260H624"/>
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 600 220"
+      to="-360 600 220"
+      dur="12s"
+      repeatCount="indefinite"/>
+
+  </g>
+
+</g>
 
 
-<!-- CONNECTION LINES -->
+<!-- ================================================= -->
+<!-- LEFT BOTTOM -->
+<!-- ================================================= -->
+
+<g>
+
+  <rect
+    x="82"
+    y="270"
+    width="305"
+    height="78"
+    rx="13"
+    fill="url(#card)"
+    stroke="#7658d0"
+    stroke-opacity=".65"/>
+
+  <animate
+    attributeName="opacity"
+    values=".15;1"
+    dur="1.2s"
+    begin=".8s"
+    repeatCount="indefinite"/>
+
+  <text
+    x="107"
+    y="291"
+    fill="#9e84ed"
+    font-family="monospace"
+    font-size="8"
+    letter-spacing="2">
+
+    CHANNEL 03
+
+  </text>
+
+  <text
+    x="107"
+    y="318"
+    fill="#ffffff"
+    font-family="Arial"
+    font-size="17"
+    font-weight="700">
+
+    INSTAGRAM
+
+  </text>
+
+  <text
+    x="107"
+    y="339"
+    fill="#89809f"
+    font-family="monospace"
+    font-size="9">
+
+    @stphnmichael._
+
+  </text>
+
+  <!-- DATA LINES -->
+  <g stroke="#a88cff">
+
+    <line
+      x1="300"
+      y1="298"
+      x2="350"
+      y2="298">
+
+      <animate
+        attributeName="x2"
+        values="320;350;320"
+        dur="2s"
+        repeatCount="indefinite"/>
+
+    </line>
+
+    <line
+      x1="300"
+      y1="304"
+      x2="337"
+      y2="304"
+      opacity=".5"/>
+
+    <line
+      x1="300"
+      y1="310"
+      x2="345"
+      y2="310"
+      opacity=".25"/>
+
+  </g>
+
+  <circle
+    cx="350"
+    cy="325"
+    r="4"
+    fill="#b49cff">
+
+    <animate
+      attributeName="opacity"
+      values="1;.2;1"
+      dur="1.7s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- RIGHT BOTTOM -->
+<!-- ================================================= -->
+
+<g>
+
+  <rect
+    x="813"
+    y="270"
+    width="305"
+    height="78"
+    rx="13"
+    fill="url(#card)"
+    stroke="#7658d0"
+    stroke-opacity=".65"/>
+
+  <animate
+    attributeName="opacity"
+    values=".15;1"
+    dur="1.2s"
+    begin="1.1s"
+    repeatCount="indefinite"/>
+
+  <text
+    x="838"
+    y="291"
+    fill="#9e84ed"
+    font-family="monospace"
+    font-size="8"
+    letter-spacing="2">
+
+    CHANNEL 04
+
+  </text>
+
+  <text
+    x="838"
+    y="318"
+    fill="#ffffff"
+    font-family="Arial"
+    font-size="17"
+    font-weight="700">
+
+    DISCORD
+
+  </text>
+
+  <text
+    x="838"
+    y="339"
+    fill="#89809f"
+    font-family="monospace"
+    font-size="9">
+
+    michaelmautoronto
+
+  </text>
+
+  <circle
+    cx="1085"
+    cy="300"
+    r="5"
+    fill="#b49cff">
+
+    <animate
+      attributeName="opacity"
+      values="1;.2;1"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <text
+    x="1085"
+    y="325"
+    text-anchor="middle"
+    fill="#665d7e"
+    font-family="monospace"
+    font-size="7">
+
+    LIVE
+
+  </text>
+
+</g>
+
+
+<!-- ================================================= -->
+<!-- ENERGY CONNECTIONS -->
+<!-- ================================================= -->
+
 <g
   fill="none"
-  stroke="#9777ff"
-  stroke-opacity=".35"
-  stroke-width="1">
+  stroke="#9b78ff"
+  stroke-width="1"
+  stroke-opacity=".3">
 
-  <path d="M390 190 Q490 190 555 215"/>
-  <path d="M810 190 Q710 190 645 215"/>
-  <path d="M390 305 Q490 285 555 230"/>
-  <path d="M810 305 Q710 285 645 230"/>
+  <path d="M387 190 Q490 190 554 215"/>
+  <path d="M813 190 Q710 190 646 215"/>
+  <path d="M387 305 Q490 285 554 230"/>
+  <path d="M813 305 Q710 285 646 230"/>
 
 </g>
 
-<!-- BOTTOM READOUT -->
+
+<!-- ================================================= -->
+<!-- MOVING DATA PARTICLES -->
+<!-- ================================================= -->
+
+<circle
+  cx="387"
+  cy="190"
+  r="3"
+  fill="#c4b3ff">
+
+  <animate
+    attributeName="cx"
+    values="387;430;480;520;554"
+    dur="2.5s"
+    repeatCount="indefinite"/>
+
+  <animate
+    attributeName="cy"
+    values="190;190;195;205;215"
+    dur="2.5s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+
+<circle
+  cx="813"
+  cy="190"
+  r="3"
+  fill="#c4b3ff">
+
+  <animate
+    attributeName="cx"
+    values="813;770;720;680;646"
+    dur="2.8s"
+    repeatCount="indefinite"/>
+
+  <animate
+    attributeName="cy"
+    values="190;190;195;205;215"
+    dur="2.8s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+
+<!-- ================================================= -->
+<!-- AI READOUT -->
+<!-- ================================================= -->
+
 <text
   x="600"
-  y="375"
+  y="290"
   text-anchor="middle"
-  fill="#766b96"
+  fill="#9f88d4"
   font-family="monospace"
   font-size="8"
   letter-spacing="3">
-  MICHAEL // COMMUNICATION CORE // 04 CHANNELS READY
+
+  NEURAL LINK // 04 CHANNELS DETECTED
+
 </text>
+
+<text
+  x="600"
+  y="309"
+  text-anchor="middle"
+  fill="#b79aff"
+  font-family="monospace"
+  font-size="10"
+  letter-spacing="2">
+
+  COMMUNICATION CORE ONLINE
+
+</text>
+
+<text
+  x="600"
+  y="331"
+  text-anchor="middle"
+  fill="#625a7d"
+  font-family="monospace"
+  font-size="8"
+  letter-spacing="2">
+
+  MICHAEL // CONNECTION MATRIX // READY
+
+</text>
+
+
+<!-- ================================================= -->
+<!-- BOTTOM HUD -->
+<!-- ================================================= -->
+
+<g
+  fill="none"
+  stroke="#9271ef"
+  stroke-opacity=".35">
+
+  <path d="M440 365H520"/>
+  <path d="M680 365H760"/>
+
+</g>
+
+<circle
+  cx="600"
+  cy="365"
+  r="3"
+  fill="#ae91ff">
+
+  <animate
+    attributeName="r"
+    values="2;5;2"
+    dur="1.8s"
+    repeatCount="indefinite"/>
+
+  <animate
+    attributeName="opacity"
+    values="1;.3;1"
+    dur="1.8s"
+    repeatCount="indefinite"/>
+
+</circle>
 
 </svg>
