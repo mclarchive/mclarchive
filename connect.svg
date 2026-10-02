@@ -1,0 +1,147 @@
+<svg width="1200" height="330" viewBox="0 0 1200 330" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#030708"></stop>
+    <stop offset=".5" stop-color="#081816"></stop>
+    <stop offset="1" stop-color="#020405"></stop>
+  </linearGradient>
+
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="4" result="blur"></feGaussianBlur>
+    <feMerge>
+      <feMergeNode in="blur"></feMergeNode>
+      <feMergeNode in="SourceGraphic"></feMergeNode>
+    </feMerge>
+  </filter>
+
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M30 0H0V30" fill="none" stroke="#00ffd5" stroke-opacity=".045"></path>
+  </pattern>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="1200" height="330" rx="24" fill="url(#bg)"></rect>
+
+<rect x="14" y="14" width="1172" height="302" rx="20" fill="url(#grid)" stroke="#00ffd5" stroke-opacity=".38"></rect>
+
+<!-- MOVING SCANLINE -->
+<rect x="60" y="70" width="1080" height="2" fill="#00ffd5" opacity=".6" filter="url(#glow)">
+
+<animate attributeName="y" values="70;280;70" dur="3.8s" repeatCount="indefinite"></animate>
+
+</rect>
+
+<!-- HEADER -->
+
+<text x="600" y="63" text-anchor="middle" fill="#9fffee" font-family="monospace" font-size="12" letter-spacing="5">
+
+MICHAEL // CONNECTION HUB
+
+</text>
+
+<text x="600" y="101" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="29" font-weight="700" letter-spacing="6">
+
+LET'S CONNECT
+
+</text>
+
+<!-- GITHUB -->
+
+<a href="https://github.com/mclarchive">
+
+<rect x="90" y="135" width="235" height="82" rx="15" fill="#061714" stroke="#00ffd5" stroke-width="1.5"></rect>
+
+<text x="207" y="169" text-anchor="middle" fill="#00ffd5" font-family="monospace" font-size="18">
+
+GITHUB
+
+</text>
+
+<text x="207" y="193" text-anchor="middle" fill="#8abdb5" font-family="monospace" font-size="11">
+
+@mclarchive
+
+</text>
+
+</a>
+
+<!-- EMAIL -->
+
+<a href="mailto:stephenmichaelks@gmail.com">
+
+<rect x="345" y="135" width="235" height="82" rx="15" fill="#061714" stroke="#00ffd5" stroke-width="1.5"></rect>
+
+<text x="462" y="169" text-anchor="middle" fill="#00ffd5" font-family="monospace" font-size="18">
+
+EMAIL
+
+</text>
+
+<text x="462" y="193" text-anchor="middle" fill="#8abdb5" font-family="monospace" font-size="10">
+
+CONTACT MICHAEL
+
+</text>
+
+</a>
+
+<!-- INSTAGRAM -->
+
+<a href="https://instagram.com/stphnmichael._">
+
+<rect x="600" y="135" width="235" height="82" rx="15" fill="#061714" stroke="#00ffd5" stroke-width="1.5"></rect>
+
+<text x="717" y="169" text-anchor="middle" fill="#00ffd5" font-family="monospace" font-size="18">
+
+INSTAGRAM
+
+</text>
+
+<text x="717" y="193" text-anchor="middle" fill="#8abdb5" font-family="monospace" font-size="10">
+
+@stphnmichael._
+
+</text>
+
+</a>
+
+<!-- STATUS -->
+
+<rect x="855" y="135" width="235" height="82" rx="15" fill="#061714" stroke="#00ffd5" stroke-width="1.5"></rect>
+
+<circle cx="885" cy="165" r="5" fill="#00ff9d">
+
+<animate attributeName="opacity" values="1;.2;1" dur="1.1s" repeatCount="indefinite"></animate>
+
+</circle>
+
+<text x="972" y="169" text-anchor="middle" fill="#00ffd5" font-family="monospace" font-size="18">
+
+STATUS
+
+</text>
+
+<text x="972" y="193" text-anchor="middle" fill="#73ffb4" font-family="monospace" font-size="10">
+
+BUILDING &amp; LEARNING
+
+</text>
+
+<!-- MOVING CONNECTION -->
+
+<line x1="160" y1="255" x2="1040" y2="255" stroke="#17443e" stroke-width="2"></line>
+
+<circle cx="160" cy="255" r="4" fill="#00ffd5">
+
+<animate attributeName="cx" values="160;1040;160" dur="4s" repeatCount="indefinite"></animate>
+
+</circle>
+
+<text x="600" y="285" text-anchor="middle" fill="#477f78" font-family="monospace" font-size="11" letter-spacing="2">
+
+curiosity → prototype → learn → build → repeat
+
+</text>
+
+</svg>
