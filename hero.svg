@@ -1,0 +1,72 @@
+<svg width="1200" height="430" viewBox="0 0 1200 430" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#05090a"/>
+    <stop offset="0.55" stop-color="#071716"/>
+    <stop offset="1" stop-color="#030506"/>
+  </linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#00ffd5" stop-opacity=".15"/>
+    <stop offset=".5" stop-color="#00ffd5"/>
+    <stop offset="1" stop-color="#00ffd5" stop-opacity=".15"/>
+  </linearGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse">
+    <path d="M35 0H0V35" fill="none" stroke="#00ffd5" stroke-opacity=".055"/>
+  </pattern>
+</defs>
+
+<rect width="1200" height="430" rx="22" fill="url(#bg)"/>
+<rect x="14" y="14" width="1172" height="402" rx="18" fill="url(#grid)" stroke="#00ffd5" stroke-opacity=".45"/>
+
+<!-- animated scanline -->
+<rect x="28" y="32" width="1144" height="2" fill="#00ffd5" opacity=".7">
+  <animate attributeName="y" values="32;390;32" dur="4s" repeatCount="indefinite"/>
+</rect>
+
+<!-- corner brackets -->
+<g fill="none" stroke="#00ffd5" stroke-width="3">
+  <path d="M45 85V45H85"/>
+  <path d="M1115 45H1155V85"/>
+  <path d="M45 345V385H85"/>
+  <path d="M1115 385H1155V345"/>
+</g>
+
+<text x="600" y="86" text-anchor="middle" fill="#00ffd5" font-family="monospace" font-size="15" letter-spacing="5">
+  SYSTEM // PROFILE INITIALIZATION
+</text>
+
+<text x="600" y="158" text-anchor="middle" fill="#f1fffc" font-family="Arial,sans-serif" font-weight="700" font-size="62" letter-spacing="8" filter="url(#glow)">
+  MICHAEL
+</text>
+
+<text x="600" y="196" text-anchor="middle" fill="#75d9cb" font-family="monospace" font-size="17" letter-spacing="3">
+  COMPUTER SCIENCE  •  HARDWARE  •  BUILDING
+</text>
+
+<!-- status pill -->
+<rect x="490" y="225" width="220" height="44" rx="22" fill="#061613" stroke="#00ffd5"/>
+<circle cx="520" cy="247" r="6" fill="#00ff91">
+  <animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/>
+</circle>
+<text x="540" y="253" fill="#d9fff7" font-family="monospace" font-size="15">SYSTEM ONLINE</text>
+
+<!-- typing-like terminal -->
+<text x="600" y="315" text-anchor="middle" fill="#74bdb4" font-family="monospace" font-size="15">
+  &gt; exploring Arduino, C++, Python &amp; the fundamentals of CS
+</text>
+<rect x="876" y="301" width="8" height="18" fill="#00ffd5">
+  <animate attributeName="opacity" values="1;0;1" dur=".8s" repeatCount="indefinite"/>
+</rect>
+
+<text x="600" y="360" text-anchor="middle" fill="#00ffd5" font-family="monospace" font-size="14" letter-spacing="2">
+  CURRENT PROJECT: GUIDE // ASSISTIVE DEVICE
+</text>
+
+<text x="600" y="390" text-anchor="middle" fill="#477f78" font-family="monospace" font-size="12">
+  mclarchive  /  michael  /  build • learn • repeat
+</text>
+</svg>
