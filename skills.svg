@@ -2,33 +2,32 @@
 
 <defs>
 
-  <!-- DARK SPACE BACKGROUND -->
+  <!-- ================================= -->
+  <!-- DARK NAVY SPACE BACKGROUND -->
+  <!-- ================================= -->
+
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#010304"/>
-    <stop offset=".35" stop-color="#04100f"/>
-    <stop offset=".65" stop-color="#071513"/>
-    <stop offset="1" stop-color="#010203"/>
+    <stop offset="0%" stop-color="#02050d"/>
+    <stop offset="38%" stop-color="#061326"/>
+    <stop offset="68%" stop-color="#08172d"/>
+    <stop offset="100%" stop-color="#02040a"/>
   </linearGradient>
 
-  <!-- GLASS -->
-  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#ffffff" stop-opacity=".07"/>
-    <stop offset=".45" stop-color="#00ffd5" stop-opacity=".018"/>
-    <stop offset="1" stop-color="#ffffff" stop-opacity=".035"/>
-  </linearGradient>
+  <!-- BLUE SPACE GLOW -->
 
-  <!-- CYAN AMBIENT -->
-  <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
-    <stop offset="0" stop-color="#00ffd5" stop-opacity=".14"/>
-    <stop offset=".45" stop-color="#00a894" stop-opacity=".045"/>
-    <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+  <radialGradient id="blueGlow" cx="50%" cy="50%" r="55%">
+    <stop offset="0%" stop-color="#1677ff" stop-opacity=".20"/>
+    <stop offset="35%" stop-color="#0b4fa8" stop-opacity=".10"/>
+    <stop offset="70%" stop-color="#082c5d" stop-opacity=".035"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
   </radialGradient>
 
-  <!-- BLUE AMBIENT -->
-  <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
-    <stop offset="0" stop-color="#247cff" stop-opacity=".08"/>
-    <stop offset=".5" stop-color="#247cff" stop-opacity=".025"/>
-    <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+  <!-- SECONDARY BLUE GLOW -->
+
+  <radialGradient id="blueGlow2" cx="50%" cy="50%" r="55%">
+    <stop offset="0%" stop-color="#00b7ff" stop-opacity=".11"/>
+    <stop offset="45%" stop-color="#1265b5" stop-opacity=".04"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
   </radialGradient>
 
   <!-- GRID -->
