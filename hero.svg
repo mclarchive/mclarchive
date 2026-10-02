@@ -2,56 +2,31 @@
 
 <defs>
 
-  <!-- SPACE BACKGROUND -->
+<!-- SPACE BACKGROUND -->
 
-  <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#020617"/>
-    <stop offset="45%" stop-color="#0b1120"/>
-    <stop offset="100%" stop-color="#02030a"/>
-  </linearGradient>
+<linearGradient id="space" x1="0" y1="0" x2="1" y2="1"> <stop offset="0%" stop-color="#020617"/> <stop offset="45%" stop-color="#0b1120"/> <stop offset="100%" stop-color="#02030a"/> </linearGradient>
 
-  <!-- BLUE NEBULA -->
+<!-- BLUE NEBULA -->
 
-  <radialGradient id="nebulaBlue">
-    <stop offset="0%" stop-color="#2563eb" stop-opacity=".28"/>
-    <stop offset="35%" stop-color="#1d4ed8" stop-opacity=".12"/>
-    <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
-  </radialGradient>
+<radialGradient id="nebulaBlue"> <stop offset="0%" stop-color="#2563eb" stop-opacity=".28"/> <stop offset="35%" stop-color="#1d4ed8" stop-opacity=".12"/> <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/> </radialGradient>
 
-  <!-- PURPLE NEBULA -->
+<!-- PURPLE NEBULA -->
 
-  <radialGradient id="nebulaPurple">
-    <stop offset="0%" stop-color="#7c3aed" stop-opacity=".20"/>
-    <stop offset="40%" stop-color="#6366f1" stop-opacity=".08"/>
-    <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-  </radialGradient>
+<radialGradient id="nebulaPurple"> <stop offset="0%" stop-color="#7c3aed" stop-opacity=".20"/> <stop offset="40%" stop-color="#6366f1" stop-opacity=".08"/> <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/> </radialGradient>
 
-  <!-- GLOW -->
+<!-- GLOW -->
 
-  <filter id="glow">
-    <feGaussianBlur stdDeviation="5" result="blur"/>
-    <feMerge>
-      <feMergeNode in="blur"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-  </filter>
+<filter id="glow"> <feGaussianBlur stdDeviation="5" result="blur"/> <feMerge> <feMergeNode in="blur"/> <feMergeNode in="SourceGraphic"/> </feMerge> </filter>
 
-  <!-- STAR GLOW -->
+<!-- STAR GLOW -->
 
-  <filter id="starGlow">
-    <feGaussianBlur stdDeviation="2"/>
-  </filter>
+<filter id="starGlow"> <feGaussianBlur stdDeviation="2"/> </filter>
 
 </defs>
 
 <!-- BACKGROUND -->
 
-<rect
-width="1200"
-height="420"
-rx="28"
-fill="url(#space)"
-/>
+<rect width="1200" height="420" rx="28" fill="url(#space)" />
 
 <!-- NEBULA -->
 
@@ -62,14 +37,11 @@ rx="360"
 ry="250"
 fill="url(#nebulaBlue)"
 
->
 
-<animate
- attributeName="cx"
- values="160;280;160"
- dur="12s"
- repeatCount="indefinite"
-/> </ellipse>
+
+
+<animate attributeName="cx" values="160;280;160" dur="12s" repeatCount="indefinite" />
+</ellipse>
 
 <ellipse
 cx="1050"
@@ -78,63 +50,33 @@ rx="360"
 ry="250"
 fill="url(#nebulaPurple)"
 
->
 
-<animate
- attributeName="cy"
- values="310;210;310"
- dur="14s"
- repeatCount="indefinite"
-/> </ellipse>
+
+
+<animate attributeName="cy" values="310;210;310" dur="14s" repeatCount="indefinite" />
+</ellipse>
 
 <!-- STARS -->
 
 <g fill="white">
 
-  <circle cx="70" cy="55" r="1.5">
-    <animate attributeName="opacity"
-      values=".2;1;.2" dur="3s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="70" cy="55" r="1.5"> <animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="145" cy="250" r="1">
-    <animate attributeName="opacity"
-      values="1;.2;1" dur="4s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="145" cy="250" r="1"> <animate attributeName="opacity" values="1;.2;1" dur="4s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="250" cy="70" r="1.5">
-    <animate attributeName="opacity"
-      values=".3;1;.3" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="250" cy="70" r="1.5"> <animate attributeName="opacity" values=".3;1;.3" dur="2.5s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="360" cy="300" r="1">
-    <animate attributeName="opacity"
-      values=".1;.9;.1" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="360" cy="300" r="1"> <animate attributeName="opacity" values=".1;.9;.1" dur="3.5s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="890" cy="65" r="1.5">
-    <animate attributeName="opacity"
-      values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="890" cy="65" r="1.5"> <animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="1010" cy="145" r="1">
-    <animate attributeName="opacity"
-      values="1;.2;1" dur="4s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="1010" cy="145" r="1"> <animate attributeName="opacity" values="1;.2;1" dur="4s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="1130" cy="80" r="1.5">
-    <animate attributeName="opacity"
-      values=".2;1;.2" dur="3s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="1130" cy="80" r="1.5"> <animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="1080" cy="350" r="1">
-    <animate attributeName="opacity"
-      values=".1;1;.1" dur="2.7s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="1080" cy="350" r="1"> <animate attributeName="opacity" values=".1;1;.1" dur="2.7s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="760" cy="330" r="1.5">
-    <animate attributeName="opacity"
-      values=".3;1;.3" dur="3.8s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="760" cy="330" r="1.5"> <animate attributeName="opacity" values=".3;1;.3" dur="3.8s" repeatCount="indefinite"/> </circle>
 
 </g>
 
@@ -142,15 +84,9 @@ fill="url(#nebulaPurple)"
 
 <g fill="white" filter="url(#starGlow)">
 
-  <circle cx="105" cy="145" r="3">
-    <animate attributeName="opacity"
-      values=".1;.8;.1" dur="4s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="105" cy="145" r="3"> <animate attributeName="opacity" values=".1;.8;.1" dur="4s" repeatCount="indefinite"/> </circle>
 
-  <circle cx="1080" cy="230" r="3">
-    <animate attributeName="opacity"
-      values=".2;1;.2" dur="5s" repeatCount="indefinite"/>
-  </circle>
+<circle cx="1080" cy="230" r="3"> <animate attributeName="opacity" values=".2;1;.2" dur="5s" repeatCount="indefinite"/> </circle>
 
 </g>
 
@@ -166,16 +102,11 @@ stroke="#94a3b8"
 stroke-opacity=".05"
 stroke-width="1"
 
->
 
-<animateTransform
- attributeName="transform"
- type="rotate"
- from="0 600 205"
- to="360 600 205"
- dur="35s"
- repeatCount="indefinite"
-/> </ellipse>
+
+
+<animateTransform attributeName="transform" type="rotate" from="0 600 205" to="360 600 205" dur="35s" repeatCount="indefinite" />
+</ellipse>
 
 <!-- TOP SYSTEM LABEL -->
 
@@ -183,7 +114,8 @@ stroke-width="1"
 font-family="monospace"
 fill="#94a3b8"
 
->
+
+
 
 <text
 x="600"
@@ -192,13 +124,12 @@ text-anchor="middle"
 font-size="14"
 letter-spacing="4"
 
->
 
-```
+
+
 SYSTEM // PROFILE INITIALIZATION
-```
 
-  </text>
+</text>
 
 </g>
 
@@ -208,7 +139,8 @@ SYSTEM // PROFILE INITIALIZATION
 font-family="monospace"
 font-size="12"
 
->
+
+
 
 <circle
 cx="445"
@@ -217,21 +149,17 @@ r="4"
 fill="#22c55e"
 filter="url(#glow)"
 
->
 
-```
+
+
 <animate
-```
-
-```
   attributeName="opacity"
   values=".3;1;.3"
   dur="2s"
   repeatCount="indefinite"
 />
-```
 
-  </circle>
+</circle>
 
 <text
 x="458"
@@ -239,13 +167,12 @@ y="107"
 fill="#64748b"
 letter-spacing="2"
 
->
 
-```
+
+
 SYSTEM ONLINE
-```
 
-  </text>
+</text>
 
 </g>
 
@@ -262,9 +189,11 @@ letter-spacing="8"
 fill="white"
 filter="url(#glow)"
 
->
 
-MICHAEL </text>
+
+
+MICHAEL
+</text>
 
 <!-- DESCRIPTION -->
 
@@ -277,18 +206,116 @@ font-size="16"
 letter-spacing="3"
 fill="#cbd5e1"
 
->
 
-COMPUTER SCIENCE • HARDWARE • BUILDING </text>
+
+
+COMPUTER SCIENCE • HARDWARE • BUILDING
+</text>
 
 <!-- INTERFACE LINE -->
 
 <g font-family="monospace">
 
-<line
-x1="390"
-y1="220"
-x2="810"
-y2="220"
-stroke="#38bdf8"
-s
+<line x1="390" y1="220" x2="810" y2="220" stroke="#38bdf8" stroke-opacity=".18" />
+
+<circle cx="600" cy="220" r="3" fill="#38bdf8" filter="url(#glow)" />
+
+<text
+x="600"
+y="247"
+text-anchor="middle"
+font-size="12"
+letter-spacing="3"
+fill="#64748b"
+
+
+
+
+INTERFACE // UI // SYSTEM ONLINE
+
+</text>
+
+</g>
+
+<!-- EXPLORING -->
+
+<text
+x="600"
+y="285"
+text-anchor="middle"
+font-family="monospace"
+font-size="13"
+letter-spacing="2"
+fill="#94a3b8"
+
+
+
+
+EXPLORING // ARDUINO • C++ • PYTHON • CS FUNDAMENTALS
+</text>
+
+<!-- CURRENT PROJECT -->
+
+<g font-family="monospace">
+
+<text
+x="600"
+y="325"
+text-anchor="middle"
+font-size="12"
+letter-spacing="2"
+fill="#475569"
+
+
+
+
+CURRENT PROJECT
+
+</text>
+
+<text
+x="600"
+y="350"
+text-anchor="middle"
+font-size="15"
+letter-spacing="2"
+fill="#e2e8f0"
+
+
+
+
+GUIDE // COMPUTER SCIENCE FUNDAMENTALS
+
+</text>
+
+</g>
+
+<!-- BOTTOM DECORATION -->
+
+<g stroke="#38bdf8" stroke-opacity=".18">
+
+<line x1="510" y1="380" x2="575" y2="380"/> <line x1="625" y1="380" x2="690" y2="380"/>
+
+</g>
+
+<!-- MOVING PARTICLE -->
+
+<circle
+cx="300"
+cy="200"
+r="2.5"
+fill="#38bdf8"
+filter="url(#glow)"
+
+
+
+
+<animateMotion path="M0,0 C200,-100 500,-100 900,0" dur="9s" repeatCount="indefinite" />
+
+</circle>
+
+<!-- BORDER -->
+
+<rect x="1" y="1" width="1198" height="418" rx="28" fill="none" stroke="white" stroke-opacity=".08" stroke-width="1" />
+
+</svg> `
