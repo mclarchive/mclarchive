@@ -1,10 +1,7 @@
 <div align="center">
-<img width="100%" src="./hero.svg"/>
+<img width="100%" src="./hero.svg" alt="Hero"/>
 <br/>
-</div>
-<img width="100%" src="./skills.svg"/>
+<img width="100%" src="./skills.svg" alt="Skills"/>
 <br/>
-</div>
-<img width="100%" src="./connect.svg"/>
-<br/>
+<img width="100%" src="./connect.svg" alt="Connect"/>
 </div>
