@@ -1,74 +1,560 @@
 <svg width="1200" height="520" viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg">
+
 <defs>
+
+  <!-- DARK SPACE BACKGROUND -->
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#030708"/><stop offset=".45" stop-color="#071b19"/><stop offset="1" stop-color="#020405"/>
+    <stop offset="0" stop-color="#010304"/>
+    <stop offset=".35" stop-color="#04100f"/>
+    <stop offset=".65" stop-color="#071513"/>
+    <stop offset="1" stop-color="#010203"/>
   </linearGradient>
-  <radialGradient id="orb" cx="50%" cy="45%" r="55%">
-    <stop offset="0" stop-color="#00ffd5" stop-opacity=".16"/><stop offset=".55" stop-color="#00a894" stop-opacity=".04"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
+
+  <!-- GLASS -->
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".07"/>
+    <stop offset=".45" stop-color="#00ffd5" stop-opacity=".018"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity=".035"/>
+  </linearGradient>
+
+  <!-- CYAN AMBIENT -->
+  <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#00ffd5" stop-opacity=".14"/>
+    <stop offset=".45" stop-color="#00a894" stop-opacity=".045"/>
+    <stop offset="1" stop-color="#000000" stop-opacity="0"/>
   </radialGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#00ffd5" stroke-opacity=".045"/></pattern>
+
+  <!-- BLUE AMBIENT -->
+  <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#247cff" stop-opacity=".08"/>
+    <stop offset=".5" stop-color="#247cff" stop-opacity=".025"/>
+    <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- GRID -->
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path
+      d="M32 0H0V32"
+      fill="none"
+      stroke="#00ffd5"
+      stroke-opacity=".028"/>
+  </pattern>
+
+  <!-- GLOW -->
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
 </defs>
 
-<rect width="1200" height="520" rx="24" fill="url(#bg)"/>
-<rect x="14" y="14" width="1172" height="492" rx="20" fill="url(#grid)" stroke="#00ffd5" stroke-opacity=".38"/>
-<ellipse cx="600" cy="255" rx="500" ry="230" fill="url(#orb)"/>
 
-<!-- ambient scan -->
-<rect x="70" y="75" width="1060" height="2" fill="#00ffd5" opacity=".65" filter="url(#glow)">
-  <animate attributeName="y" values="75;445;75" dur="4.2s" repeatCount="indefinite"/>
-</rect>
+<!-- ================================= -->
+<!-- BACKGROUND -->
+<!-- ================================= -->
 
-<text x="600" y="78" text-anchor="middle" fill="#9fffee" font-family="monospace" font-size="12" letter-spacing="5">MICHAEL // TECH STACK</text>
-<text x="600" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-weight="700" font-size="31" letter-spacing="6">BUILDING TOOLKIT</text>
+<rect
+  width="1200"
+  height="520"
+  rx="24"
+  fill="url(#bg)"
+/>
 
-<!-- particles -->
-<g fill="#00ffd5">
- <circle cx="180" cy="145" r="2"><animate attributeName="cy" values="145;125;145" dur="2.5s" repeatCount="indefinite"/></circle>
- <circle cx="1020" cy="175" r="2"><animate attributeName="cy" values="175;200;175" dur="3s" repeatCount="indefinite"/></circle>
- <circle cx="155" cy="380" r="2"><animate attributeName="cx" values="155;180;155" dur="3.4s" repeatCount="indefinite"/></circle>
- <circle cx="1040" cy="390" r="2"><animate attributeName="cx" values="1040;1010;1040" dur="2.8s" repeatCount="indefinite"/></circle>
+<!-- ambient lights -->
+
+<ellipse
+  cx="170"
+  cy="180"
+  rx="430"
+  ry="300"
+  fill="url(#cyanGlow)"
+>
+  <animate
+    attributeName="cx"
+    values="170;260;170"
+    dur="18s"
+    repeatCount="indefinite"/>
+</ellipse>
+
+<ellipse
+  cx="1050"
+  cy="360"
+  rx="420"
+  ry="300"
+  fill="url(#blueGlow)"
+>
+  <animate
+    attributeName="cy"
+    values="360;300;360"
+    dur="20s"
+    repeatCount="indefinite"/>
+</ellipse>
+
+<!-- subtle grid -->
+
+<rect
+  x="14"
+  y="14"
+  width="1172"
+  height="492"
+  rx="20"
+  fill="url(#grid)"
+  stroke="#00ffd5"
+  stroke-opacity=".25"
+/>
+
+
+<!-- ================================= -->
+<!-- GLASS PANEL -->
+<!-- ================================= -->
+
+<rect
+  x="28"
+  y="28"
+  width="1144"
+  height="464"
+  rx="20"
+  fill="url(#glass)"
+  stroke="#ffffff"
+  stroke-opacity=".045"
+/>
+
+<!-- glass reflection -->
+
+<path
+  d="M55 62 Q600 35 1145 62"
+  fill="none"
+  stroke="#ffffff"
+  stroke-opacity=".08"
+/>
+
+<path
+  d="M80 72 Q600 52 1120 72"
+  fill="none"
+  stroke="#00ffd5"
+  stroke-opacity=".035"
+/>
+
+
+<!-- ================================= -->
+<!-- HUD CORNERS -->
+<!-- ================================= -->
+
+<g
+  fill="none"
+  stroke="#00ffd5"
+  stroke-opacity=".42"
+  stroke-width="1">
+
+  <path d="M42 105V42H105"/>
+  <path d="M1095 42H1158V105"/>
+  <path d="M42 415V478H105"/>
+  <path d="M1095 478H1158V415"/>
+
 </g>
 
-<!-- cards -->
-<g font-family="monospace" text-anchor="middle">
- <rect x="150" y="155" width="250" height="105" rx="16" fill="#061411" stroke="#00ffd5" stroke-opacity=".75"/>
- <text x="275" y="188" fill="#00ffd5" font-size="12" letter-spacing="3">EMBEDDED</text>
- <text x="275" y="222" fill="#ffffff" font-size="21">ARDUINO</text>
- <text x="275" y="244" fill="#659f97" font-size="11">HARDWARE • SENSORS</text>
 
- <rect x="475" y="155" width="250" height="105" rx="16" fill="#061411" stroke="#00ffd5" stroke-opacity=".75"/>
- <text x="600" y="188" fill="#00ffd5" font-size="12" letter-spacing="3">PROGRAMMING</text>
- <text x="600" y="222" fill="#ffffff" font-size="21">C++</text>
- <text x="600" y="244" fill="#659f97" font-size="11">LOGIC • SYSTEMS</text>
+<!-- ================================= -->
+<!-- HEADER -->
+<!-- ================================= -->
 
- <rect x="800" y="155" width="250" height="105" rx="16" fill="#061411" stroke="#00ffd5" stroke-opacity=".75"/>
- <text x="925" y="188" fill="#00ffd5" font-size="12" letter-spacing="3">SOFTWARE</text>
- <text x="925" y="222" fill="#ffffff" font-size="21">PYTHON</text>
- <text x="925" y="244" fill="#659f97" font-size="11">AUTOMATION • TOOLS</text>
-
- <rect x="250" y="300" width="210" height="95" rx="16" fill="#080d19" stroke="#6d65ff" stroke-opacity=".8"/>
- <text x="355" y="332" fill="#9f9aff" font-size="12" letter-spacing="3">WEB</text>
- <text x="355" y="363" fill="#ffffff" font-size="19">JAVASCRIPT</text>
- <text x="355" y="382" fill="#7775a9" font-size="10">INTERACTION</text>
-
- <rect x="495" y="300" width="210" height="95" rx="16" fill="#080d19" stroke="#6d65ff" stroke-opacity=".8"/>
- <text x="600" y="332" fill="#9f9aff" font-size="12" letter-spacing="3">WEB</text>
- <text x="600" y="363" fill="#ffffff" font-size="19">HTML</text>
- <text x="600" y="382" fill="#7775a9" font-size="10">STRUCTURE</text>
-
- <rect x="740" y="300" width="210" height="95" rx="16" fill="#080d19" stroke="#6d65ff" stroke-opacity=".8"/>
- <text x="845" y="332" fill="#9f9aff" font-size="12" letter-spacing="3">FUNDAMENTALS</text>
- <text x="845" y="363" fill="#ffffff" font-size="19">COMPUTER SCIENCE</text>
- <text x="845" y="382" fill="#7775a9" font-size="10">LEARNING</text>
-</g>
-
-<!-- animated status -->
-<text x="600" y="445" text-anchor="middle" fill="#5caaa0" font-family="monospace" font-size="12" letter-spacing="3">
- <tspan>STATUS: </tspan><tspan fill="#00ff9d">BUILDING • LEARNING • ITERATING</tspan>
+<text
+  x="600"
+  y="78"
+  text-anchor="middle"
+  fill="#9fffee"
+  font-family="monospace"
+  font-size="12"
+  letter-spacing="5">
+  MICHAEL // TECH STACK
 </text>
-<rect x="350" y="465" width="500" height="5" rx="3" fill="#102b27"/>
-<rect x="350" y="465" width="500" height="5" rx="3" fill="#00ffd5">
- <animate attributeName="width" values="120;500;260;430;120" dur="3.5s" repeatCount="indefinite"/>
+
+<text
+  x="600"
+  y="115"
+  text-anchor="middle"
+  fill="#ffffff"
+  font-family="Arial,sans-serif"
+  font-weight="700"
+  font-size="31"
+  letter-spacing="6">
+  BUILDING TOOLKIT
+</text>
+
+
+<!-- ================================= -->
+<!-- FLOATING PARTICLES -->
+<!-- ================================= -->
+
+<g fill="#00ffd5">
+
+  <circle cx="180" cy="145" r="1.5">
+    <animate
+      attributeName="cy"
+      values="145;125;145"
+      dur="5s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1020" cy="175" r="1.5">
+    <animate
+      attributeName="cy"
+      values="175;200;175"
+      dur="6s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="155" cy="380" r="1.5">
+    <animate
+      attributeName="cx"
+      values="155;180;155"
+      dur="6.5s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1040" cy="390" r="1.5">
+    <animate
+      attributeName="cx"
+      values="1040;1010;1040"
+      dur="5.5s"
+      repeatCount="indefinite"/>
+  </circle>
+
+</g>
+
+
+<!-- ================================= -->
+<!-- TOP CARDS -->
+<!-- ================================= -->
+
+<g font-family="monospace" text-anchor="middle">
+
+  <!-- ARDUINO -->
+
+  <rect
+    x="150"
+    y="155"
+    width="250"
+    height="105"
+    rx="16"
+    fill="#ffffff"
+    fill-opacity=".032"
+    stroke="#00ffd5"
+    stroke-opacity=".55"/>
+
+  <text
+    x="275"
+    y="188"
+    fill="#00ffd5"
+    font-size="12"
+    letter-spacing="3">
+    IOT
+  </text>
+
+  <text
+    x="275"
+    y="222"
+    fill="#ffffff"
+    font-size="21">
+    ARDUINO
+  </text>
+
+  <text
+    x="275"
+    y="244"
+    fill="#659f97"
+    font-size="11">
+    HARDWARE • SENSORS
+  </text>
+
+
+  <!-- C++ -->
+
+  <rect
+    x="475"
+    y="155"
+    width="250"
+    height="105"
+    rx="16"
+    fill="#ffffff"
+    fill-opacity=".032"
+    stroke="#00ffd5"
+    stroke-opacity=".55"/>
+
+  <text
+    x="600"
+    y="188"
+    fill="#00ffd5"
+    font-size="12"
+    letter-spacing="3">
+    PROGRAMMING
+  </text>
+
+  <text
+    x="600"
+    y="222"
+    fill="#ffffff"
+    font-size="21">
+    C++
+  </text>
+
+  <text
+    x="600"
+    y="244"
+    fill="#659f97"
+    font-size="11">
+    LOGIC • SYSTEMS
+  </text>
+
+
+  <!-- PYTHON -->
+
+  <rect
+    x="800"
+    y="155"
+    width="250"
+    height="105"
+    rx="16"
+    fill="#ffffff"
+    fill-opacity=".032"
+    stroke="#00ffd5"
+    stroke-opacity=".55"/>
+
+  <text
+    x="925"
+    y="188"
+    fill="#00ffd5"
+    font-size="12"
+    letter-spacing="3">
+    SOFTWARE
+  </text>
+
+  <text
+    x="925"
+    y="222"
+    fill="#ffffff"
+    font-size="21">
+    PYTHON
+  </text>
+
+  <text
+    x="925"
+    y="244"
+    fill="#659f97"
+    font-size="11">
+    AUTOMATION • TOOLS
+  </text>
+
+
+  <!-- JAVASCRIPT -->
+
+  <rect
+    x="250"
+    y="300"
+    width="210"
+    height="95"
+    rx="16"
+    fill="#ffffff"
+    fill-opacity=".022"
+    stroke="#6d65ff"
+    stroke-opacity=".60"/>
+
+  <text
+    x="355"
+    y="332"
+    fill="#9f9aff"
+    font-size="12"
+    letter-spacing="3">
+    WEB
+  </text>
+
+  <text
+    x="355"
+    y="363"
+    fill="#ffffff"
+    font-size="19">
+    JAVASCRIPT
+  </text>
+
+  <text
+    x="355"
+    y="382"
+    fill="#7775a9"
+    font-size="10">
+    INTERACTION
+  </text>
+
+
+  <!-- HTML -->
+
+  <rect
+    x="495"
+    y="300"
+    width="210"
+    height="95"
+    rx="16"
+    fill="#ffffff"
+    fill-opacity=".022"
+    stroke="#6d65ff"
+    stroke-opacity=".60"/>
+
+  <text
+    x="600"
+    y="332"
+    fill="#9f9aff"
+    font-size="12"
+    letter-spacing="3">
+    WEB
+  </text>
+
+  <text
+    x="600"
+    y="363"
+    fill="#ffffff"
+    font-size="19">
+    HTML
+  </text>
+
+  <text
+    x="600"
+    y="382"
+    fill="#7775a9"
+    font-size="10">
+    STRUCTURE
+  </text>
+
+
+  <!-- COMPUTER SCIENCE -->
+
+  <rect
+    x="740"
+    y="300"
+    width="210"
+    height="95"
+    rx="16"
+    fill="#ffffff"
+    fill-opacity=".022"
+    stroke="#6d65ff"
+    stroke-opacity=".60"/>
+
+  <text
+    x="845"
+    y="332"
+    fill="#9f9aff"
+    font-size="12"
+    letter-spacing="3">
+    FUNDAMENTALS
+  </text>
+
+  <text
+    x="845"
+    y="363"
+    fill="#ffffff"
+    font-size="18">
+    COMPUTER SCIENCE
+  </text>
+
+  <text
+    x="845"
+    y="382"
+    fill="#7775a9"
+    font-size="10">
+    LEARNING
+  </text>
+
+</g>
+
+
+<!-- ================================= -->
+<!-- SUBTLE ANIMATED SCAN -->
+<!-- ================================= -->
+
+<rect
+  x="80"
+  y="145"
+  width="1040"
+  height="1"
+  fill="#00ffd5"
+  opacity=".28"
+  filter="url(#glow)"
+>
+  <animate
+    attributeName="y"
+    values="140;410;140"
+    dur="9s"
+    repeatCount="indefinite"/>
 </rect>
+
+
+<!-- ================================= -->
+<!-- STATUS -->
+<!-- ================================= -->
+
+<text
+  x="600"
+  y="445"
+  text-anchor="middle"
+  fill="#5caaa0"
+  font-family="monospace"
+  font-size="12"
+  letter-spacing="3">
+
+  <tspan>STATUS: </tspan>
+
+  <tspan fill="#00ff9d">
+    BUILDING • LEARNING • ITERATING
+  </tspan>
+
+</text>
+
+
+<!-- ================================= -->
+<!-- SLOW STATUS BAR -->
+<!-- ================================= -->
+
+<rect
+  x="350"
+  y="465"
+  width="500"
+  height="5"
+  rx="3"
+  fill="#102b27"
+/>
+
+<rect
+  x="350"
+  y="465"
+  width="120"
+  height="5"
+  rx="3"
+  fill="#00ffd5"
+>
+
+  <animate
+    attributeName="width"
+    values="120;500;260;430;120"
+    dur="20s"
+    repeatCount="indefinite"/>
+
+</rect>
+
+
+<!-- ================================= -->
+<!-- OUTER BORDER -->
+<!-- ================================= -->
+
+<rect
+  x="16"
+  y="16"
+  width="1168"
+  height="488"
+  rx="22"
+  fill="none"
+  stroke="#ffffff"
+  stroke-opacity=".055"
+/>
+
 </svg>
