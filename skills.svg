@@ -557,7 +557,7 @@
   <animate
     attributeName="width"
     values="120;500;260;430;120"
-    dur="9s"
+    dur="20s"
     repeatCount="indefinite"/>
 </rect>
 
