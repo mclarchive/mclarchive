@@ -30,16 +30,27 @@
     <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
   </radialGradient>
 
+  <!-- GLASS -->
+
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity=".075"/>
+    <stop offset="35%" stop-color="#8ccfff" stop-opacity=".025"/>
+    <stop offset="70%" stop-color="#0a4d8f" stop-opacity=".025"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity=".035"/>
+  </linearGradient>
+
   <!-- GRID -->
+
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
     <path
       d="M32 0H0V32"
       fill="none"
-      stroke="#00ffd5"
-      stroke-opacity=".028"/>
+      stroke="#4faaff"
+      stroke-opacity=".035"/>
   </pattern>
 
   <!-- GLOW -->
+
   <filter id="glow">
     <feGaussianBlur stdDeviation="4" result="blur"/>
     <feMerge>
@@ -62,37 +73,42 @@
   fill="url(#bg)"
 />
 
-<!-- ambient lights -->
+<!-- MAIN BLUE AMBIENT -->
 
 <ellipse
-  cx="170"
-  cy="180"
-  rx="430"
-  ry="300"
-  fill="url(#cyanGlow)"
->
-  <animate
-    attributeName="cx"
-    values="170;260;170"
-    dur="18s"
-    repeatCount="indefinite"/>
-</ellipse>
-
-<ellipse
-  cx="1050"
-  cy="360"
-  rx="420"
+  cx="600"
+  cy="255"
+  rx="560"
   ry="300"
   fill="url(#blueGlow)"
 >
   <animate
-    attributeName="cy"
-    values="360;300;360"
-    dur="20s"
+    attributeName="cx"
+    values="560;640;560"
+    dur="18s"
     repeatCount="indefinite"/>
 </ellipse>
 
-<!-- subtle grid -->
+<!-- SIDE BLUE LIGHT -->
+
+<ellipse
+  cx="150"
+  cy="250"
+  rx="300"
+  ry="280"
+  fill="url(#blueGlow2)"
+>
+  <animate
+    attributeName="cy"
+    values="250;210;250"
+    dur="16s"
+    repeatCount="indefinite"/>
+</ellipse>
+
+
+<!-- ================================= -->
+<!-- OUTER FRAME -->
+<!-- ================================= -->
 
 <rect
   x="14"
@@ -101,13 +117,13 @@
   height="492"
   rx="20"
   fill="url(#grid)"
-  stroke="#00ffd5"
-  stroke-opacity=".25"
+  stroke="#328cff"
+  stroke-opacity=".30"
 />
 
 
 <!-- ================================= -->
-<!-- GLASS PANEL -->
+<!-- TEMPERED GLASS -->
 <!-- ================================= -->
 
 <rect
@@ -117,24 +133,24 @@
   height="464"
   rx="20"
   fill="url(#glass)"
-  stroke="#ffffff"
-  stroke-opacity=".045"
+  stroke="#8bcfff"
+  stroke-opacity=".055"
 />
 
 <!-- glass reflection -->
 
 <path
-  d="M55 62 Q600 35 1145 62"
+  d="M55 62 Q600 34 1145 62"
   fill="none"
   stroke="#ffffff"
-  stroke-opacity=".08"
+  stroke-opacity=".085"
 />
 
 <path
-  d="M80 72 Q600 52 1120 72"
+  d="M85 73 Q600 52 1115 73"
   fill="none"
-  stroke="#00ffd5"
-  stroke-opacity=".035"
+  stroke="#5dbbff"
+  stroke-opacity=".045"
 />
 
 
@@ -144,8 +160,8 @@
 
 <g
   fill="none"
-  stroke="#00ffd5"
-  stroke-opacity=".42"
+  stroke="#3fa8ff"
+  stroke-opacity=".48"
   stroke-width="1">
 
   <path d="M42 105V42H105"/>
@@ -164,7 +180,7 @@
   x="600"
   y="78"
   text-anchor="middle"
-  fill="#9fffee"
+  fill="#8fd4ff"
   font-family="monospace"
   font-size="12"
   letter-spacing="5">
@@ -188,7 +204,7 @@
 <!-- FLOATING PARTICLES -->
 <!-- ================================= -->
 
-<g fill="#00ffd5">
+<g fill="#55baff">
 
   <circle cx="180" cy="145" r="1.5">
     <animate
@@ -226,264 +242,271 @@
 
 
 <!-- ================================= -->
-<!-- TOP CARDS -->
+<!-- CARDS -->
 <!-- ================================= -->
 
 <g font-family="monospace" text-anchor="middle">
 
-  <!-- ARDUINO -->
 
-  <rect
-    x="150"
-    y="155"
-    width="250"
-    height="105"
-    rx="16"
-    fill="#ffffff"
-    fill-opacity=".032"
-    stroke="#00ffd5"
-    stroke-opacity=".55"/>
+<!-- ARDUINO -->
 
-  <text
-    x="275"
-    y="188"
-    fill="#00ffd5"
-    font-size="12"
-    letter-spacing="3">
-    IOT
-  </text>
+<rect
+  x="150"
+  y="155"
+  width="250"
+  height="105"
+  rx="16"
+  fill="#07182a"
+  fill-opacity=".48"
+  stroke="#36aaff"
+  stroke-opacity=".58"
+/>
 
-  <text
-    x="275"
-    y="222"
-    fill="#ffffff"
-    font-size="21">
-    ARDUINO
-  </text>
+<text
+  x="275"
+  y="188"
+  fill="#55c2ff"
+  font-size="12"
+  letter-spacing="3">
+  EMBEDDED
+</text>
 
-  <text
-    x="275"
-    y="244"
-    fill="#659f97"
-    font-size="11">
-    HARDWARE • SENSORS
-  </text>
+<text
+  x="275"
+  y="222"
+  fill="#ffffff"
+  font-size="21">
+  ARDUINO
+</text>
 
-
-  <!-- C++ -->
-
-  <rect
-    x="475"
-    y="155"
-    width="250"
-    height="105"
-    rx="16"
-    fill="#ffffff"
-    fill-opacity=".032"
-    stroke="#00ffd5"
-    stroke-opacity=".55"/>
-
-  <text
-    x="600"
-    y="188"
-    fill="#00ffd5"
-    font-size="12"
-    letter-spacing="3">
-    PROGRAMMING
-  </text>
-
-  <text
-    x="600"
-    y="222"
-    fill="#ffffff"
-    font-size="21">
-    C++
-  </text>
-
-  <text
-    x="600"
-    y="244"
-    fill="#659f97"
-    font-size="11">
-    LOGIC • SYSTEMS
-  </text>
+<text
+  x="275"
+  y="244"
+  fill="#739bbd"
+  font-size="11">
+  HARDWARE • SENSORS
+</text>
 
 
-  <!-- PYTHON -->
+<!-- C++ -->
 
-  <rect
-    x="800"
-    y="155"
-    width="250"
-    height="105"
-    rx="16"
-    fill="#ffffff"
-    fill-opacity=".032"
-    stroke="#00ffd5"
-    stroke-opacity=".55"/>
+<rect
+  x="475"
+  y="155"
+  width="250"
+  height="105"
+  rx="16"
+  fill="#07182a"
+  fill-opacity=".48"
+  stroke="#36aaff"
+  stroke-opacity=".58"
+/>
 
-  <text
-    x="925"
-    y="188"
-    fill="#00ffd5"
-    font-size="12"
-    letter-spacing="3">
-    SOFTWARE
-  </text>
+<text
+  x="600"
+  y="188"
+  fill="#55c2ff"
+  font-size="12"
+  letter-spacing="3">
+  PROGRAMMING
+</text>
 
-  <text
-    x="925"
-    y="222"
-    fill="#ffffff"
-    font-size="21">
-    PYTHON
-  </text>
+<text
+  x="600"
+  y="222"
+  fill="#ffffff"
+  font-size="21">
+  C++
+</text>
 
-  <text
-    x="925"
-    y="244"
-    fill="#659f97"
-    font-size="11">
-    AUTOMATION • TOOLS
-  </text>
-
-
-  <!-- JAVASCRIPT -->
-
-  <rect
-    x="250"
-    y="300"
-    width="210"
-    height="95"
-    rx="16"
-    fill="#ffffff"
-    fill-opacity=".022"
-    stroke="#6d65ff"
-    stroke-opacity=".60"/>
-
-  <text
-    x="355"
-    y="332"
-    fill="#9f9aff"
-    font-size="12"
-    letter-spacing="3">
-    WEB
-  </text>
-
-  <text
-    x="355"
-    y="363"
-    fill="#ffffff"
-    font-size="19">
-    JAVASCRIPT
-  </text>
-
-  <text
-    x="355"
-    y="382"
-    fill="#7775a9"
-    font-size="10">
-    INTERACTION
-  </text>
+<text
+  x="600"
+  y="244"
+  fill="#739bbd"
+  font-size="11">
+  LOGIC • SYSTEMS
+</text>
 
 
-  <!-- HTML -->
+<!-- PYTHON -->
 
-  <rect
-    x="495"
-    y="300"
-    width="210"
-    height="95"
-    rx="16"
-    fill="#ffffff"
-    fill-opacity=".022"
-    stroke="#6d65ff"
-    stroke-opacity=".60"/>
+<rect
+  x="800"
+  y="155"
+  width="250"
+  height="105"
+  rx="16"
+  fill="#07182a"
+  fill-opacity=".48"
+  stroke="#36aaff"
+  stroke-opacity=".58"
+/>
 
-  <text
-    x="600"
-    y="332"
-    fill="#9f9aff"
-    font-size="12"
-    letter-spacing="3">
-    WEB
-  </text>
+<text
+  x="925"
+  y="188"
+  fill="#55c2ff"
+  font-size="12"
+  letter-spacing="3">
+  SOFTWARE
+</text>
 
-  <text
-    x="600"
-    y="363"
-    fill="#ffffff"
-    font-size="19">
-    HTML
-  </text>
+<text
+  x="925"
+  y="222"
+  fill="#ffffff"
+  font-size="21">
+  PYTHON
+</text>
 
-  <text
-    x="600"
-    y="382"
-    fill="#7775a9"
-    font-size="10">
-    STRUCTURE
-  </text>
+<text
+  x="925"
+  y="244"
+  fill="#739bbd"
+  font-size="11">
+  AUTOMATION • TOOLS
+</text>
 
 
-  <!-- COMPUTER SCIENCE -->
+<!-- JAVASCRIPT -->
 
-  <rect
-    x="740"
-    y="300"
-    width="210"
-    height="95"
-    rx="16"
-    fill="#ffffff"
-    fill-opacity=".022"
-    stroke="#6d65ff"
-    stroke-opacity=".60"/>
+<rect
+  x="250"
+  y="300"
+  width="210"
+  height="95"
+  rx="16"
+  fill="#10142b"
+  fill-opacity=".55"
+  stroke="#7167ff"
+  stroke-opacity=".62"
+/>
 
-  <text
-    x="845"
-    y="332"
-    fill="#9f9aff"
-    font-size="12"
-    letter-spacing="3">
-    FUNDAMENTALS
-  </text>
+<text
+  x="355"
+  y="332"
+  fill="#9d96ff"
+  font-size="12"
+  letter-spacing="3">
+  WEB
+</text>
 
-  <text
-    x="845"
-    y="363"
-    fill="#ffffff"
-    font-size="18">
-    COMPUTER SCIENCE
-  </text>
+<text
+  x="355"
+  y="363"
+  fill="#ffffff"
+  font-size="19">
+  JAVASCRIPT
+</text>
 
-  <text
-    x="845"
-    y="382"
-    fill="#7775a9"
-    font-size="10">
-    LEARNING
-  </text>
+<text
+  x="355"
+  y="382"
+  fill="#7d7bab"
+  font-size="10">
+  INTERACTION
+</text>
+
+
+<!-- HTML -->
+
+<rect
+  x="495"
+  y="300"
+  width="210"
+  height="95"
+  rx="16"
+  fill="#10142b"
+  fill-opacity=".55"
+  stroke="#7167ff"
+  stroke-opacity=".62"
+/>
+
+<text
+  x="600"
+  y="332"
+  fill="#9d96ff"
+  font-size="12"
+  letter-spacing="3">
+  WEB
+</text>
+
+<text
+  x="600"
+  y="363"
+  fill="#ffffff"
+  font-size="19">
+  HTML
+</text>
+
+<text
+  x="600"
+  y="382"
+  fill="#7d7bab"
+  font-size="10">
+  STRUCTURE
+</text>
+
+
+<!-- COMPUTER SCIENCE -->
+
+<rect
+  x="740"
+  y="300"
+  width="210"
+  height="95"
+  rx="16"
+  fill="#10142b"
+  fill-opacity=".55"
+  stroke="#7167ff"
+  stroke-opacity=".62"
+/>
+
+<text
+  x="845"
+  y="332"
+  fill="#9d96ff"
+  font-size="12"
+  letter-spacing="3">
+  FUNDAMENTALS
+</text>
+
+<text
+  x="845"
+  y="363"
+  fill="#ffffff"
+  font-size="18">
+  COMPUTER SCIENCE
+</text>
+
+<text
+  x="845"
+  y="382"
+  fill="#7d7bab"
+  font-size="10">
+  LEARNING
+</text>
 
 </g>
 
 
 <!-- ================================= -->
-<!-- SUBTLE ANIMATED SCAN -->
+<!-- VERY SUBTLE SCAN -->
 <!-- ================================= -->
 
 <rect
   x="80"
-  y="145"
+  y="140"
   width="1040"
   height="1"
-  fill="#02040a"
-  opacity=".28"
+  fill="#48b7ff"
+  opacity=".22"
   filter="url(#glow)"
 >
   <animate
     attributeName="y"
     values="140;410;140"
-    dur="9s"
+    dur="10s"
     repeatCount="indefinite"/>
 </rect>
 
@@ -496,14 +519,14 @@
   x="600"
   y="445"
   text-anchor="middle"
-  fill="#02040a0"
+  fill="#6e91aa"
   font-family="monospace"
   font-size="12"
   letter-spacing="3">
 
   <tspan>STATUS: </tspan>
 
-  <tspan fill="#00ff9d">
+  <tspan fill="#58c5ff">
     BUILDING • LEARNING • ITERATING
   </tspan>
 
@@ -520,7 +543,7 @@
   width="500"
   height="5"
   rx="3"
-  fill="#102b27"
+  fill="#102338"
 />
 
 <rect
@@ -529,20 +552,18 @@
   width="120"
   height="5"
   rx="3"
-  fill="#00ffd5"
+  fill="#36aaff"
 >
-
   <animate
     attributeName="width"
     values="120;500;260;430;120"
-    dur="20s"
+    dur="9s"
     repeatCount="indefinite"/>
-
 </rect>
 
 
 <!-- ================================= -->
-<!-- OUTER BORDER -->
+<!-- OUTER HIGHLIGHT -->
 <!-- ================================= -->
 
 <rect
@@ -553,7 +574,7 @@
   rx="22"
   fill="none"
   stroke="#ffffff"
-  stroke-opacity=".055"
+  stroke-opacity=".045"
 />
 
 </svg>
