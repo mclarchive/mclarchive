@@ -6,5 +6,4 @@
 <br/>
 </div>
 <img width="100%" src="./connect.svg"/>
-<br/><br/>
 </div>
