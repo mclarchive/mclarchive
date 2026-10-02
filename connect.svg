@@ -2,7 +2,8 @@
 
 <defs>
 
-  <!-- BACKGROUND -->
+  <!-- ================= BACKGROUND ================= -->
+
   <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#010207"/>
     <stop offset=".35" stop-color="#050817"/>
@@ -22,7 +23,8 @@
     <stop offset="1" stop-color="#000000" stop-opacity="0"/>
   </radialGradient>
 
-  <!-- GLASS -->
+  <!-- ================= GLASS ================= -->
+
   <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#ffffff" stop-opacity=".09"/>
     <stop offset=".45" stop-color="#9b72ff" stop-opacity=".035"/>
@@ -35,7 +37,8 @@
     <stop offset="1" stop-color="#1d6eff" stop-opacity=".12"/>
   </linearGradient>
 
-  <!-- GRID -->
+  <!-- ================= GRID ================= -->
+
   <pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse">
     <path
       d="M35 0H0V35"
@@ -44,7 +47,8 @@
       stroke-opacity=".035"/>
   </pattern>
 
-  <!-- STARS -->
+  <!-- ================= STARS ================= -->
+
   <pattern id="stars" width="180" height="120" patternUnits="userSpaceOnUse">
     <circle cx="15" cy="20" r="1" fill="#ffffff" opacity=".45"/>
     <circle cx="70" cy="82" r=".8" fill="#bba7ff" opacity=".55"/>
@@ -53,7 +57,8 @@
     <circle cx="100" cy="110" r=".6" fill="#ffffff" opacity=".35"/>
   </pattern>
 
-  <!-- GLOW -->
+  <!-- ================= GLOWS ================= -->
+
   <filter id="glow">
     <feGaussianBlur stdDeviation="4" result="b"/>
     <feMerge>
@@ -85,6 +90,8 @@
   rx="26"
   fill="url(#stars)"/>
 
+<!-- Purple ambient light -->
+
 <ellipse
   cx="580"
   cy="220"
@@ -99,6 +106,8 @@
     repeatCount="indefinite"/>
 
 </ellipse>
+
+<!-- Blue ambient light -->
 
 <ellipse
   cx="1100"
@@ -132,6 +141,9 @@
   stroke="#ffffff"
   stroke-opacity=".06"/>
 
+
+<!-- Glass reflection -->
+
 <path
   d="M65 64 Q600 32 1135 64"
   fill="none"
@@ -157,6 +169,7 @@
 
   <path d="M52 105V52H105"/>
   <path d="M1095 52H1148V105"/>
+
   <path d="M52 325V378H105"/>
   <path d="M1095 378H1148V325"/>
 
@@ -245,6 +258,8 @@
 
 <g transform="translate(600 220)">
 
+  <!-- Outer glow -->
+
   <circle
     r="72"
     fill="none"
@@ -253,12 +268,18 @@
     stroke-width="18"
     filter="url(#bigGlow)"/>
 
+
+  <!-- Outer ring -->
+
   <circle
     r="58"
     fill="none"
     stroke="#9b77ff"
     stroke-opacity=".25"
     stroke-width="1"/>
+
+
+  <!-- Rotating segmented ring -->
 
   <circle
     r="46"
@@ -278,17 +299,26 @@
 
   </circle>
 
+
+  <!-- Core housing -->
+
   <circle
     r="34"
     fill="#090719"
     stroke="#a783ff"
     stroke-opacity=".55"/>
 
+
+  <!-- Core glow -->
+
   <circle
     r="14"
     fill="#a987ff"
     opacity=".3"
     filter="url(#glow)"/>
+
+
+  <!-- Core -->
 
   <circle
     r="7"
@@ -302,6 +332,9 @@
       repeatCount="indefinite"/>
 
   </circle>
+
+
+  <!-- Rotating brackets -->
 
   <g
     fill="none"
@@ -345,6 +378,8 @@
       stroke="#9f7cff"
       stroke-opacity=".65"/>
 
+    <!-- popup -->
+
     <animate
       attributeName="opacity"
       values="0;1"
@@ -360,22 +395,12 @@
       dur="1s"
       fill="freeze"/>
 
-    <path
-      d="M85 165V145H105"
-      fill="none"
-      stroke="#b39aff"/>
-
-    <path
-      d="M365 237H385V217"
-      fill="none"
-      stroke="#b39aff"/>
-
     <text
       x="108"
-      y="166"
+      y="170"
       fill="#a98aff"
       font-family="monospace"
-      font-size="8"
+      font-size="9"
       letter-spacing="2">
 
       CHANNEL 01
@@ -384,7 +409,7 @@
 
     <text
       x="108"
-      y="195"
+      y="199"
       fill="#ffffff"
       font-family="Arial"
       font-size="18"
@@ -396,8 +421,8 @@
 
     <text
       x="108"
-      y="216"
-      fill="#9386b2"
+      y="220"
+      fill="#82789e"
       font-family="monospace"
       font-size="10">
 
@@ -406,65 +431,21 @@
     </text>
 
     <circle
-      cx="350"
-      cy="163"
-      r="4"
-      fill="#ae91ff"
-      filter="url(#glow)">
-
-      <animate
-        attributeName="opacity"
-        values="1;.25;1"
-        dur="1.8s"
-        repeatCount="indefinite"/>
-
-    </circle>
-
-    <g fill="#9d7cff">
-
-      <rect x="315" y="198" width="3" height="12">
-        <animate
-          attributeName="height"
-          values="5;16;8;13;5"
-          dur="2s"
-          repeatCount="indefinite"/>
-      </rect>
-
-      <rect x="322" y="198" width="3" height="12">
-        <animate
-          attributeName="height"
-          values="12;5;16;7;12"
-          dur="1.7s"
-          repeatCount="indefinite"/>
-      </rect>
-
-      <rect x="329" y="198" width="3" height="12">
-        <animate
-          attributeName="height"
-          values="8;14;5;16;8"
-          dur="2.3s"
-          repeatCount="indefinite"/>
-      </rect>
-
-      <rect x="336" y="198" width="3" height="12">
-        <animate
-          attributeName="height"
-          values="15;6;12;5;15"
-          dur="1.9s"
-          repeatCount="indefinite"/>
-      </rect>
-
-    </g>
+      cx="354"
+      cy="180"
+      r="5"
+      fill="#a987ff"
+      filter="url(#glow)"/>
 
     <text
-      x="350"
-      y="224"
+      x="354"
+      y="205"
       text-anchor="middle"
-      fill="#756b91"
+      fill="#796d9c"
       font-family="monospace"
-      font-size="7">
+      font-size="8">
 
-      REPOSITORY
+      ACTIVE
 
     </text>
 
@@ -506,22 +487,12 @@
       dur="1s"
       fill="freeze"/>
 
-    <path
-      d="M815 165V145H835"
-      fill="none"
-      stroke="#b39aff"/>
-
-    <path
-      d="M1095 237H1115V217"
-      fill="none"
-      stroke="#b39aff"/>
-
     <text
       x="838"
-      y="166"
+      y="170"
       fill="#a98aff"
       font-family="monospace"
-      font-size="8"
+      font-size="9"
       letter-spacing="2">
 
       CHANNEL 02
@@ -530,7 +501,7 @@
 
     <text
       x="838"
-      y="195"
+      y="199"
       fill="#ffffff"
       font-family="Arial"
       font-size="18"
@@ -542,8 +513,8 @@
 
     <text
       x="838"
-      y="216"
-      fill="#9386b2"
+      y="220"
+      fill="#82789e"
       font-family="monospace"
       font-size="9">
 
@@ -551,44 +522,22 @@
 
     </text>
 
-    <g
-      fill="none"
-      stroke="#a987ff"
-      stroke-width="1">
-
-      <path
-        d="M1045 202
-           L1052 202
-           L1056 194
-           L1061 211
-           L1066 199
-           L1071 202
-           L1078 202"/>
-
-      <animate
-        attributeName="opacity"
-        values=".25;1;.25"
-        dur="2s"
-        repeatCount="indefinite"/>
-
-    </g>
-
     <circle
-      cx="1087"
-      cy="163"
-      r="4"
-      fill="#ae91ff"
+      cx="1084"
+      cy="180"
+      r="5"
+      fill="#a987ff"
       filter="url(#glow)"/>
 
     <text
-      x="1087"
-      y="226"
+      x="1084"
+      y="205"
       text-anchor="middle"
-      fill="#756b91"
+      fill="#796d9c"
       font-family="monospace"
-      font-size="7">
+      font-size="8">
 
-      SECURE CHANNEL
+      READY
 
     </text>
 
@@ -630,22 +579,12 @@
       dur="1s"
       fill="freeze"/>
 
-    <path
-      d="M85 290V270H105"
-      fill="none"
-      stroke="#a88cff"/>
-
-    <path
-      d="M365 348H385V328"
-      fill="none"
-      stroke="#a88cff"/>
-
     <text
       x="108"
-      y="291"
+      y="295"
       fill="#9d82ee"
       font-family="monospace"
-      font-size="8"
+      font-size="9"
       letter-spacing="2">
 
       CHANNEL 03
@@ -654,7 +593,7 @@
 
     <text
       x="108"
-      y="318"
+      y="320"
       fill="#ffffff"
       font-family="Arial"
       font-size="17"
@@ -665,8 +604,8 @@
     </text>
 
     <text
-      x="108"
-      y="338"
+      x="260"
+      y="320"
       fill="#82789e"
       font-family="monospace"
       font-size="9">
@@ -674,43 +613,6 @@
       @stphnmichael._
 
     </text>
-
-    <g
-      stroke="#a88cff"
-      stroke-width="1">
-
-      <line x1="300" y1="298" x2="350" y2="298"/>
-
-      <line
-        x1="300"
-        y1="303"
-        x2="335"
-        y2="303"
-        opacity=".45"/>
-
-      <line
-        x1="300"
-        y1="308"
-        x2="345"
-        y2="308"
-        opacity=".25"/>
-
-    </g>
-
-    <circle
-      cx="350"
-      cy="318"
-      r="4"
-      fill="#ae91ff"
-      filter="url(#glow)">
-
-      <animate
-        attributeName="r"
-        values="3;5;3"
-        dur="2s"
-        repeatCount="indefinite"/>
-
-    </circle>
 
   </g>
 
@@ -750,22 +652,12 @@
       dur="1s"
       fill="freeze"/>
 
-    <path
-      d="M815 290V270H835"
-      fill="none"
-      stroke="#a88cff"/>
-
-    <path
-      d="M1095 348H1115V328"
-      fill="none"
-      stroke="#a88cff"/>
-
     <text
       x="838"
-      y="291"
+      y="295"
       fill="#9d82ee"
       font-family="monospace"
-      font-size="8"
+      font-size="9"
       letter-spacing="2">
 
       CHANNEL 04
@@ -774,7 +666,7 @@
 
     <text
       x="838"
-      y="318"
+      y="320"
       fill="#ffffff"
       font-family="Arial"
       font-size="17"
@@ -785,40 +677,13 @@
     </text>
 
     <text
-      x="838"
-      y="338"
+      x="948"
+      y="320"
       fill="#82789e"
       font-family="monospace"
       font-size="9">
 
       michaelmautoronto
-
-    </text>
-
-    <circle
-      cx="1085"
-      cy="302"
-      r="5"
-      fill="#a987ff"
-      filter="url(#glow)">
-
-      <animate
-        attributeName="opacity"
-        values="1;.2;1"
-        dur="1.6s"
-        repeatCount="indefinite"/>
-
-    </circle>
-
-    <text
-      x="1085"
-      y="325"
-      text-anchor="middle"
-      fill="#756b91"
-      font-family="monospace"
-      font-size="7">
-
-      LIVE
 
     </text>
 
