@@ -476,7 +476,7 @@
   y="145"
   width="1040"
   height="1"
-  fill="#00ffd5"
+  fill="#02040a"
   opacity=".28"
   filter="url(#glow)"
 >
@@ -496,7 +496,7 @@
   x="600"
   y="445"
   text-anchor="middle"
-  fill="#5caaa0"
+  fill="#02040a0"
   font-family="monospace"
   font-size="12"
   letter-spacing="3">
